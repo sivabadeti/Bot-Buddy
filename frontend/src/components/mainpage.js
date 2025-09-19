@@ -13,7 +13,7 @@ export function Mainpage() {
     setChat((prev) => [...prev, { role: "user", text: userInput }]);
 
     try {
-      const res = await fetch("http://localhost:5000/ask", {
+      const res = await fetch("https://bot-buddy-backend-u7nm.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userInput }),
